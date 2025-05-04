@@ -1,0 +1,123 @@
+.footer-section {
+    background-color: hsl(233, 26%, 24%);
+    color: white;
+    padding: 40px 0;
+}
+  
+.footer-overview {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+  
+/* Logo and Social Icons */
+.logoXicon {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+  
+.logo img {
+    filter: brightness(0) invert(1);
+    width: 150px;
+}
+  
+.icons {
+    display: flex;
+    gap: 15px;
+}
+  
+.icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+  
+.icons img:hover {
+    transform: scale(1.1);
+}
+  
+/* Footer Links */
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+  
+.link1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.link1 a {
+    text-decoration: none;
+    color: hsl(220, 16%, 85%);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+  
+.link1 a:hover {
+    color: hsl(136, 65%, 51%);
+}
+  
+/* Button and Copyright */
+.buttonXcopyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    text-align: right;
+}
+  
+.buttonXcopyright button {
+    background-color: hsl(136, 65%, 51%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+  
+.buttonXcopyright button:hover {
+    background-color: hsl(136, 73%, 60%);
+}
+  
+.buttonXcopyright p {
+    font-size: 12px;
+    color: hsl(220, 16%, 85%);
+}
+  
+
+
+  /* Responsive */
+@media (max-width: 768px) {
+    .footer-overview {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .buttonXcopyright {
+      align-items: center;
+    }
+  
+    .footer-links {
+      justify-content: center;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+    }
+}
+  

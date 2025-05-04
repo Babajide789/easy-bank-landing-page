@@ -1,0 +1,272 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #2d2e2e;
+}
+  
+.overview {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+/* Header Section */
+.leftXright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    margin-top: -55px;
+}
+  
+.left {
+    flex: 1;
+    max-width: 500px;
+
+    z-index: 1;
+
+}
+  
+.header-text h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #2d314d;
+    margin-bottom: 20px;
+}
+  
+.header-p p {
+    color: #7c7c7c;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+  
+.request-btn button {
+    background-color: hsl(136, 65%, 51%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.request-btn button:hover {
+    background-color: hsl(136, 70%, 40%);
+}
+  
+.right {
+  flex: 1;
+  position: relative;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure background image stays behind */
+.right img:nth-child(2) {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Position mockup image on top */
+.right img:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0); /* Adjust as needed */
+}
+  
+/* Info Section */
+.info-section {
+    margin: 80px 0;
+    text-align: left;
+}
+
+.infos {
+    text-align: left;
+
+    max-width: 500px;
+}
+  
+.info-head h4 {
+    font-size: 2rem;
+    color: #2d314d;
+    margin-bottom: 16px;
+}
+  
+.info-para p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #7c7c7c;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    
+}
+  
+.info-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+  
+.info1 {
+    flex: 1 1 220px;
+    text-align: left;
+}
+  
+.info1 img {
+    margin-bottom: 20px;
+}
+  
+.info1 p:first-of-type {
+    font-weight: bold;
+    color: #2d314d;
+    margin-bottom: 10px;
+}
+  
+.info1 p:last-of-type {
+    color: #7c7c7c;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+  
+/* Article Section */
+.article-section {
+    margin-bottom: 80px;
+}
+  
+.article-head h4 {
+    font-size: 2rem;
+    color: #2d314d;
+    margin-bottom: 30px;
+}
+  
+.article-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+  
+.article-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+  
+.article-para {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+  
+.article-para img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.article-para p:first-of-type {
+    font-size: 0.8rem;
+    color: #7c7c7c;
+    margin: 15px 20px 5px;
+}
+  
+.article-para h3 {
+    color: #2d314d;
+    font-size: 1.1rem;
+    margin: 0 20px 10px;
+}
+  
+.article-para p:last-of-type {
+    color: #7c7c7c;
+    font-size: 0.9rem;
+    margin: 0 20px 20px;
+    line-height: 1.5;
+}
+
+  
+  /* Responsive */
+@media screen and (max-width: 768px) {
+    .leftXright {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .info-panel, .article-body {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right {
+        width: 100%;
+        height: 400px;
+        background-image: url('../assets/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        margin-top: -64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+  
+    
+    .right img:last-child {
+        display: none; /* hide desktop background img */
+    }
+
+    .right img:first-child {
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+    
+  
+    .header-text h3 {
+      font-size: 2rem;
+    }
+  
+    .info1 {
+      text-align: center;
+    }
+
+    .left{
+        margin-top: -10px;
+    }
+
+    .infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+  
